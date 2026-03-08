@@ -27,3 +27,12 @@ To function correctly on modern Android versions (API 31+), the app requires:
 2. **Exact Alarms**: `android.permission.SCHEDULE_EXACT_ALARM`
 
 ---
+
+## 👩‍💻 Author
+
+Developed by **Vaishnavi Kenchi**  
+📌 Diploma in Computer Science | Aspiring Software Developer  
+
+---
+
+⭐ If you like this project, don’t forget to **star** the repository!
