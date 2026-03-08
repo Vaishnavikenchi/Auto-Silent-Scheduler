@@ -26,12 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
     TimePicker startPicker,endPicker;
     Button btnSet;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        // Check for Exact Alarm Permission (Required for SDK 31+)
+        
         AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
             if (!am.canScheduleExactAlarms()) {
@@ -39,30 +40,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }
-
-        // 1. Handle UI Layout and Window Insets
-
-
-        // 2. CHECK PERMISSION: Do Not Disturb Access (Only needs to be here once)
+        
+        // CHECK PERMISSION: Do Not Disturb Access (Only needs to be here once)
         NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         if (nm != null && !nm.isNotificationPolicyAccessGranted()) {
             Intent intent = new Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
             startActivity(intent);
         }
 
-        // 3. UI INITIALIZATION (Find views once)
+        //UI INITIALIZATION (Find views once)
         startPicker = findViewById(R.id.startTimePicker);
         endPicker = findViewById(R.id.endTimePicker);
         btnSet = findViewById(R.id.btnSetSchedule);
 
-        // 4. BUTTON CLICK LOGIC
+        // BUTTON CLICK LOGIC
         btnSet.setOnClickListener(v -> {
             ((AudioManager)getSystemService(Context.AUDIO_SERVICE)).setRingerMode(AudioManager.RINGER_MODE_SILENT);
             Calendar startCal = getInstance();
             startCal.set(HOUR_OF_DAY, startPicker.getHour());
             startCal.set(MINUTE, startPicker.getMinute());
             startCal.set(SECOND, 0);
-            startCal.set(MILLISECOND, 0); // Clear milliseconds
+            startCal.set(MILLISECOND, 0); 
 
             Calendar endCal = getInstance();
             endCal.set(HOUR_OF_DAY, endPicker.getHour());
@@ -78,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // 5. SCHEDULING LOGIC
+    // SCHEDULING LOGIC
     public void startSchedule(long startTimeMillis, long endTimeMillis) {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
@@ -95,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         if (alarmManager != null) {
-            // setExactAndAllowWhileIdle ensures it works even when the phone is sleeping
+        
             alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, startTimeMillis, startPI);
             alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, endTimeMillis, endPI);
         }
