@@ -28,6 +28,21 @@ To function correctly on modern Android versions (API 31+), the app requires:
 
 ---
 
+## 🚀 Future Enhancements
+To further improve the utility and user experience, the following features are planned for future updates:
+
+1.**Location-Based Silencing (Geofencing)**: Automatically trigger silent mode when the user enters specific coordinates, such as a college campus or office building.
+
+2.**Calendar Integration**: Sync with Google Calendar to automatically silence the device during scheduled meetings or lecture blocks.
+
+3.**Weekly Recurring Schedules**: Allow users to set different silent windows for weekdays vs. weekends (e.g., a "Study Mode" for Mon-Fri).
+
+4.**Custom Volume Profiles**: Instead of just "Silent," allow users to set specific volume percentages for media, alarms, and ringtones separately.
+
+5.**Quick Settings Tile**: Add a toggle in the Android notification shade for one-tap access to the scheduler.
+
+6.**Persistent Service (Boot Receiver)**: Implement a BOOT_COMPLETED receiver to ensure schedules are automatically re-registered after a device restart.
+
 ## 👩‍💻 Author
 
 Developed by **Vaishnavi Kenchi**  
