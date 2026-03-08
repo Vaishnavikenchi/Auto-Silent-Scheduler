@@ -11,7 +11,7 @@ public class SilentReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        android.util.Log.d("SILENT_DEBUG", "Receiver Triggered!"); // This line is new
+        android.util.Log.d("SILENT_DEBUG", "Receiver Triggered!"); 
 
         AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
         String action = intent.getStringExtra("ACTION");
