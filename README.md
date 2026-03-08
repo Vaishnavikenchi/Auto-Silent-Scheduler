@@ -43,6 +43,13 @@ To further improve the utility and user experience, the following features are p
 
 6.**Persistent Service (Boot Receiver)**: Implement a BOOT_COMPLETED receiver to ensure schedules are automatically re-registered after a device restart.
 
+
+## 📸 UI Preview
+
+<p align="center">
+  <img src="./OutputScreenshot/Auto-Silent-Scheduler.png" width="350" title="App Screenshot">
+</p>
+
 ## 👩‍💻 Author
 
 Developed by **Vaishnavi Kenchi**  
