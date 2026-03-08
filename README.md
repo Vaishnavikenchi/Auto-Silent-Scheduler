@@ -47,7 +47,7 @@ To further improve the utility and user experience, the following features are p
 ## 📸 UI Preview
 
 <p align="center">
-  <img src="./OutputScreenshot/Auto-Silent-Scheduler.png" width="280" title="App Screenshot">
+  <img src="./OutputScreenshot/Auto-Silent-Scheduler.jpeg" width="280" title="App Screenshot">
 </p>
 
 ## 👩‍💻 Author
