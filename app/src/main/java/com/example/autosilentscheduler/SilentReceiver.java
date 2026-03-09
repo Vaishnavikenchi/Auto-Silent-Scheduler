@@ -8,8 +8,6 @@ import android.media.AudioManager;
 
 public class SilentReceiver extends BroadcastReceiver {
 
-
-    @Override
     public void onReceive(Context context, Intent intent) {
         android.util.Log.d("SILENT_DEBUG", "Receiver Triggered!"); 
 
