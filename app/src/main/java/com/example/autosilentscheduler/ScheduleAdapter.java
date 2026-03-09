@@ -31,7 +31,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
             notifyItemRemoved(position);
         });
     }
-
+    
     @Override
     public int getItemCount() { return list.size(); }
 
