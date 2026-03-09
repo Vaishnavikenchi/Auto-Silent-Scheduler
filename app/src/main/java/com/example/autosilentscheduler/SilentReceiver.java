@@ -13,7 +13,7 @@ public class SilentReceiver extends BroadcastReceiver {
 
         AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
         String action = intent.getStringExtra("ACTION");
-
+        
         if ("SILENT".equals(action)) {
             audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
             android.util.Log.d("SILENT_DEBUG", "Mode changed to SILENT");
