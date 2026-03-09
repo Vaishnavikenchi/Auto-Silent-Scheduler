@@ -8,7 +8,6 @@ public class ScheduleModel {
         this.id = id;
         this.dateTime = dateTime;
     }
-
     public String getDateTime() { return dateTime; }
     public int getId() { return id; }
 }
