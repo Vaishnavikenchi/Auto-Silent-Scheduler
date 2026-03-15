@@ -15,4 +15,5 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSheet"
         android:layout_width="match_parent"
-        android:layout_height="400dp" /> </LinearLayout>
+        android:layout_height="400dp" />
+</LinearLayout>

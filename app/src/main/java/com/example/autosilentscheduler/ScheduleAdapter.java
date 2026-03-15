@@ -22,7 +22,6 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_schedule, parent, false);
         return new ViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.info.setText(list.get(position).getDateTime());
@@ -31,10 +30,9 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
             notifyItemRemoved(position);
         });
     }
-    
+
     @Override
     public int getItemCount() { return list.size(); }
-
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView info;
         ImageButton delete;
